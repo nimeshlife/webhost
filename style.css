@@ -1,0 +1,119 @@
+*{
+    margin: 0;font-family: 'Courier New', Courier, monospace;
+    padding: 0;
+    
+}body{overflow-y: hidden;}
+    .ee {
+        background-color: black;
+        height: calc(100vh - 3vh);
+        width: 25%;
+    }
+
+    img {
+        width: 49%;
+        height: 10%;
+    }
+
+    .navbar ul li {
+        padding: 3%;
+        color: beige;
+        overflow: hidden;
+        font-size: 3vh;
+    }
+
+    .content1 {
+        display: flex;
+        
+    }
+    .content{
+        background-color: rgb(73, 69, 69);
+        height: calc(100vh - 3vh);
+        width: calc(100% - 25%);
+        
+        /* display: flex; */
+        /* float: left; */
+    }
+    .foot{
+        height: 4vh;
+        width: 100%;
+        background-color: rgb(134, 54, 117);
+        color: aliceblue;
+        font-size: 3vh;
+        
+    }
+    .nav ul li{
+        display: inline-block;
+        height: 40px;
+        font-size: 20px;
+        
+    }
+    button{
+       background-color: none;
+    }
+    .content .nav{
+        background-color: rgba(58, 58, 73, 0.924);
+        height: 5vh;
+        position: relative;
+     }
+     .body{
+         position: relative;
+         display: flex;
+         flex-direction: row;
+        
+         width: 100%;
+         height: calc(100vh - 5vh - 3vh);
+         background-color: blueviolet;
+         box-shadow: 3px solid black;
+         overflow-x: scroll;
+         
+        
+        
+
+     }
+     .nim{
+         height: 200px;
+         /* position: absolute; */
+         width:100vw ;
+         margin: 5px 0px 0px 5px;
+     }
+     .nim :hover{
+         border: 2px solid black;
+     }
+     /* .desi:hover{
+         animation: em 1s ease-in alternate-reverse;
+     }
+     @keyframes em {
+         
+         
+         
+         100%{
+             font-size:2vh ; */
+         
+     
+     .CON{
+         margin: 0;
+         padding: 0;
+         height: 50vh;
+         min-width: 70vw;
+         
+     }
+     body{
+         position: relative;
+         
+     }
+     #mol{
+         background-color:  rgba(58, 58, 73, 0.924);
+        position: absolute;
+        right: 0;
+        top: 5px;
+        margin-right: 20px;
+        border-radius: 30px;
+        width: 200px;
+       
+     }
+      ::placeholder{
+         color: black;
+        
+       
+     }
+     
