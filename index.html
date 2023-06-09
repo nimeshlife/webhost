@@ -27,7 +27,7 @@
          the quality that we promise
         </div>
       </div>
-      <div class="netflixOriginals">
+      <div class="nOriginals">
         <div class="original__header">
           <h2>ORIGINALS</h2>
         </div>
@@ -117,7 +117,7 @@
                 
                 e= document.createElement("video")
                 e.setAttribute("id",`${a[i]["name"]}`)
-            
+            e.setAttribute("class","org_ed")
              e.src=a[i]["download_url"]
              e.controls=true
                 v[0].appendChild(e)
