@@ -110,7 +110,9 @@ body {
     justify-content: center;
     /* border: 2px solid blue; */
   }
-  
+.org_ed{
+    width:200px;
+}
   .featured::after {
     content: "";
     /* border: 2px solid green; */
@@ -127,7 +129,7 @@ body {
     );
   }
   
-  .netflixOriginals h2,
+  .nOriginals h2,
   .movies__header h2 {
     padding-left: 30px;
   }
