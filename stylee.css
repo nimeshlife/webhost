@@ -84,7 +84,9 @@ body {
   .logo > img {
     width: 120px;
   }
-  
+  .org_ed{
+    width:400px;
+}
   .profile {
     position: relative;
   }
@@ -110,9 +112,7 @@ body {
     justify-content: center;
     /* border: 2px solid blue; */
   }
-.org_ed{
-    width:400px;
-}
+
   .featured::after {
     content: "";
     /* border: 2px solid green; */
