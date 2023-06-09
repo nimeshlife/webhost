@@ -102,94 +102,27 @@
 
 
     <script>
-        fetching =(url,loca,type)=>{
-            fetch(url)
-            .then(data =>{if(data.ok){
-                return data.json()
+        fetch("https://api.github.com/repos/nimeshlife/videos/contents").then(response=>{if(response.ok){
+     return response.json();}
+    })
+         
+    .then(data=>{
+        return raju(data)
+    }).catch(er=>{console.log(er)})
+        
+        raju=(a)=>{
+        
+            let v= document.querySelectorAll(".original__movies")
+            for (let i = 0; i < a.length; i++) {
+                
+                e= document.createElement("video")
+                e.setAttribute("id",`${a[i]["name"]}`)
+             e.src=a[i]["download_url"]
+             e.play()
+                v[0].appendChild(e)
+             
             }
-            else{
-                throw new Error('something went wrong');
-                
-                }
-                
-            })
-            .then(data => {
-                return dom(data,loca,type)
-            })
-            .catch(error => console.log(error))
-        }
-
-        dom =(movi,loca,type)=>{
-            el = document.querySelector(loca)
-      for(mov of movi.results){
- console.log(mov)
- er = document.createElement('img')
- er.setAttribute('id',mov.id)
- er.src = `https://image.tmdb.org/t/p/original${mov[type]}`
- el.appendChild(er)
- }
-        }
-
-        orign =()=>{
-            fetching('https://api.themoviedb.org/3/discover/tv?api_key=19f84e11932abbc79e6d83f82d6d1045&with_networks=213','.original__movies', 'backdrop_path')
-        }
-
-
-
-
-
-
-
-
-function fetchMovies(url, dom_element, path_type) {
-  fetch(url)
-    .then(response => {
-      if (response.ok) {
-        return response.json()
-      } else {
-        throw new Error('something went wrong')
-      }
-    })
-    .then(data => {
-      showMovies(data, dom_element, path_type)
-    })
-    .catch(error_data => {
-      console.log(error_data)
-    })
-}
-
-//  ** Function that displays the movies to the DOM **
-showMovies = (movies, dom_element, path_type) => {
-  
-  // Create a variable that grabs id or class
-  var moviesEl = document.querySelector(dom_element)
-
-  // Loop through object
-  for (var movie of movies.results) {
-
-    // Within loop create an img element
-    var imageElement = document.createElement('img')
-
-    // Set attribute
-    imageElement.setAttribute('data-id', movie.id)
-
-    // Set source
-    imageElement.src = `https://image.tmdb.org/t/p/${movie[path_type]}`
-
-    // Add event listener to handleMovieSelection() onClick
-    // imageElement.addEventListener('click', e => {
-    //   handleMovieSelection(e)
-    // })
-    // Append the imageElement to the dom_element selected
-    moviesEl.appendChild(imageElement)
-  }
-}
-orign2 =()=>{
-            fetchMovies('https://api.themoviedb.org/3/discover/tv?api_key=19f84e11932abbc79e6d83f82d6d1045&with_networks=213','original__movies',' backdrop_path')
-        }
-document.addEventListener("DOMContentLoaded", () => {
-  orign()
-});
+    }
     </script>
   </body>
 </html>
