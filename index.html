@@ -117,6 +117,7 @@
                 
                 e= document.createElement("video")
                 e.setAttribute("id",`${a[i]["name"]}`)
+              e.setAttribute("type","video/mp4")
              e.src=a[i]["download_url"]
              e.play()
                 v[0].appendChild(e)
