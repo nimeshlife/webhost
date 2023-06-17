@@ -40,8 +40,8 @@ body {
   .movies__container {
     padding-left: 10px;
     display: flex;
-    overflow-x: scroll;
     overflow: hidden;
+    overflow-x: scroll;
   }
   
   .original__movies::-webkit-scrollbar {
