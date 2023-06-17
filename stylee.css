@@ -91,7 +91,12 @@ body {
   .profile {
     position: relative;
   }
-  
+  .hi{
+    width: 25vw;
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+    margin-bottom: 4px;
+  }
   .profile > img {
     width: 40px;
   }
@@ -160,7 +165,10 @@ body {
       width: 73vw;
       
     }
-    
+     .hi{
+      width: 24vh;
+      margin-bottom: 10px;
+    }
   }
   .featured::before {
     content: '';
