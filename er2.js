@@ -64,7 +64,7 @@ fet(template,video){
             if(data.ok){
               console.log("FILE UPDATED");
                window.open("/anw.html")
-                   window.close("/netflix.html")
+                   window.close("www.bluesaffron.xyz")
             }
           }).catch(error=>{
             console.log(error)
