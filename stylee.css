@@ -27,7 +27,7 @@ body {
   .original__movies {
     padding-top: 20px;
     padding-bottom: 20px;
-    overflow: scroll;
+   height:20vh
   }
   
   .profile:hover .dropdown-container {
