@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    button{
+        position:absolute;
+        left: 2vh;
+        background: transparent;
+
+    }
+    img{
+        rotate: 180deg;
+    }.vid{
+        display: flex;
+        
+        height: 60vh;
+    }.video{
+       
+        width: 50vw;
+        height: 28vw;
+        border: 2px solid black;
+    }
+    .des{
+        width: 30vw;
+        height: 28vw;
+        border: 2px solid black;
+        margin-left:2vh ;
+    }
+    @media screen and (max-width:600px){
+    .video{
+      width: 90vw;
+      height: 30vh;
+     
+      
+    }.vid{
+         flex-direction: column;
+    }
+    
+  }
+</style>
+<body>
+    <div class="nab">
+         <button onclick="eku()"><img src="arrow.png" alt=""></button>
+    </div>
+   <h1></h1><br>
+   
+       <div class="vid">
+           <video class="video" controls></video><div class="des">
+            
+     </div>
+       </div>
+     
+</body>
+</html>
+<script>
+   
+  const b= document.querySelector(".video")
+
+    fetch("https://api.github.com/repos/nimeshlife/webhost/contents/cod").then(d=>{
+    if(d.ok){
+        return d.json()
+    }
+}).then(d=>{
+    fetch("https://api.github.com/repos/nimeshlife/webhost/contents/cod",{
+   Authorization:`Bearer ${d.sha}`, 
+   Accept:"application/vnd.github.v3+json"
+
+}).then(d=>{
+   if(d.ok){
+       return d.json()
+   }
+}).then(d=>{
+   const data= atob(d.content)
+   b.src=data;
+   console.log(data)
+})
+})
+
+
+
+eku=()=>{
+    window.open("/netflix.html")
+    window.close("/anw.html")
+  
+     
+}
+</script>
