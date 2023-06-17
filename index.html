@@ -101,29 +101,29 @@
     ></script>
 
 
-    <script>
-        fetch("https://api.github.com/repos/nimeshlife/videos/contents").then(response=>{if(response.ok){
-     return response.json();}
-    })
+    <script src="er2.js">
+    //     fetch("https://api.github.com/repos/nimeshlife/videos/contents").then(response=>{if(response.ok){
+    //  return response.json();}
+    // })
          
-    .then(data=>{
-        return raju(data)
-    }).catch(er=>{console.log(er)})
+    // .then(data=>{
+    //     return raju(data)
+    // }).catch(er=>{console.log(er)})
         
-        raju=(a)=>{
+    //     raju=(a)=>{
         
-            let v= document.querySelectorAll(".original__movies")
-            for (let i = 0; i < a.length; i++) {
+    //         let v= document.querySelectorAll(".original__movies")
+    //         for (let i = 0; i < a.length; i++) {
                 
-                e= document.createElement("video")
-                e.setAttribute("id",`${a[i]["name"]}`)
-            e.setAttribute("class","org_ed")
-             e.src=a[i]["download_url"]
-             e.controls=true
-                v[0].appendChild(e)
+    //             e= document.createElement("video")
+    //             e.setAttribute("id",`${a[i]["name"]}`)
+    //         e.setAttribute("class","org_ed")
+    //          e.src=a[i]["download_url"]
+    //          e.controls=true
+    //             v[0].appendChild(e)
              
-            }
-    }
-    </script>
+    //         }
+    // }
+    // </script>
   </body>
 </html>
